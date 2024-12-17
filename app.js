@@ -45,11 +45,11 @@ app.get('/', (req, res) => {
 
 // Rotta bacheca
 app.get('/bacheca', (req, res) => {
-  const res = {
+  const response = {
     listaPost: posts,
     conteggioPost: posts.length
   };
-  res.json(res);
+  res.json(response);
 })
 
 
