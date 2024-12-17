@@ -1,8 +1,9 @@
 const express = require('express'); // Importazione di Express.js
-
 const app = express(); // Applicazione Express
+const path = require('path');
+
 const port = 3000; // Imposta la porta su cui il server ascolta
-console.log('Ciao');
+
 
 // Rotta principale
 app.get('/', (req, res) => {
