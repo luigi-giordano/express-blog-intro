@@ -9,7 +9,7 @@ const posts = [
   {
       titolo: "Introduzione a Express.js",
       contenuto: "Express.js è un framework minimalista per Node.js.",
-      immagine: "",
+      immagine: "/public/ciambeellone.jpeg",
       tags: ["Node.js", "Express", "Backend"]
   },
   {
@@ -38,6 +38,9 @@ const posts = [
   }
 ];
 
+// Rendo publici i file statici
+app.use(express.static('public'));
+
 // Rotta principale
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html')); // Risposta da inviare
@@ -46,28 +49,16 @@ app.get('/', (req, res) => {
 // Rotta bacheca
 app.get('/bacheca', (req, res) => {
   const post = {
-    listaPost: posts,
-    conteggioPost: posts.length
+    conteggioPost: posts.length,
+    listaPost: posts
   };
   res.json(post);
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// app.get('/ciambellone', (req, res) => {
+//   res.send('<img src="/ciambellone.jpeg" alt="">')
+// } )
 
 
 // Avvio del server
