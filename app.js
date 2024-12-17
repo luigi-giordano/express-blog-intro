@@ -40,8 +40,35 @@ const posts = [
 
 // Rotta principale
 app.get('/', (req, res) => {
-    res.send('Server del mio blog'); // Risposta da inviare
+    res.sendFile(path.join(__dirname, 'index.html')); // Risposta da inviare
 });
+
+// Rotta bacheca
+app.get('/bacheca', (req, res) => {
+  const res = {
+    listaPost: posts,
+    conteggioPost: posts.length
+  };
+  res.json(res);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Avvio del server
 app.listen(port, () => {
