@@ -9,32 +9,31 @@ const posts = [
   {
       titolo: "Introduzione a Express.js",
       contenuto: "Express.js è un framework minimalista per Node.js.",
-      immagine: "/public/ciambeellone.jpeg",
+      immagine: "/ciambellone.jpeg",
       tags: ["Node.js", "Express", "Backend"]
   },
   {
       titolo: "JavaScript",
       contenuto: "Funzionalità del linguaggio JavaScript.",
-      immagine: "",
+      immagine: "/cracker_barbabietola.jpeg",
       tags: ["JavaScript", "JS", "Frontend"]
   },
   {
       titolo: "API",
       contenuto: "API con Express.js.",
-      immagine: "",
+      immagine: "/pane_fritto_dolce.jpeg",
       tags: ["API", "URL", "Express"]
   },
   {
       titolo: "Database",
       contenuto: "Database NoSQL",
-      immagine: "",
+      immagine: "/pasta_barbabietola.jpeg",
       tags: ["Database", "Librerie", "NoSQL"]
   },
   {
       titolo: "Bootstrap",
       contenuto: "Guida all'utilizzo di Bootstrap",
-      immagine: "",
-      tags: ["Bootstrap", "CSS", "Card"]
+      immagine: "/torta_paesana.jpeg",
   }
 ];
 
@@ -55,11 +54,9 @@ app.get('/bacheca', (req, res) => {
   res.json(post);
 })
 
-
 // app.get('/ciambellone', (req, res) => {
 //   res.send('<img src="/ciambellone.jpeg" alt="">')
 // } )
-
 
 // Avvio del server
 app.listen(port, () => {
